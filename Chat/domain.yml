@@ -1,0 +1,80 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - agradecer
+  - preguntar_calidad
+  - preguntar_columnas
+  - mejor_calidad
+  - peor_calidad
+  - vino_por_id
+  - vinos_con_mas_alcohol
+  - cantidad_por_calidad
+  - promedio_alcohol
+  - vinos_por_ph
+  - vinos_con_poco_azucar
+  - vinos_por_acidez
+  - distribucion_calidad
+  - vinos_por_sulphates
+  - info_dataset
+  - vinos_intermedios
+  - contar_total_vinos
+  - ayuda
+  - vinos_muy_densos
+  - vinos_por_sulfuro_libre
+  - consulta_vino_nombre
+  - maximo_ph
+  - vinos_bajos_en_cloruros
+  - vinos_con_citricos
+  - vinos_con_dioxido_total
+  - vinos_con_ph_y_calidad
+  - recomendar_vino
+  - calidad_por_alcohol
+
+responses:
+  utter_saludo:
+    - text: "¡Hola! ¿En qué te puedo ayudar con la calidad del vino? 🍷"
+
+  utter_despedida:
+    - text: "¡Hasta luego! Espero que encuentres un buen vino. 🍇"
+
+  utter_agradecer:
+    - text: "¡De nada! Estoy aquí para ayudarte con vinos."
+
+  utter_preguntar_calidad:
+    - text: "La calidad es una puntuación de 0 a 10 dada por expertos según características químicas."
+
+  utter_preguntar_columnas:
+    - text: "Las columnas incluyen: acidez, azúcar, alcohol, pH, sulfitos, densidad, etc."
+
+  utter_info_dataset:
+    - text: "El dataset contiene 1599 vinos tintos portugueses, con 11 variables físico-químicas."
+
+  utter_ayuda:
+    - text: "Puedo ayudarte a consultar vinos por calidad, alcohol, pH, azúcar, sulfitos, entre otras propiedades."
+
+actions:
+  - action_mejor_calidad
+  - action_peor_calidad
+  - action_vino_por_id
+  - action_vinos_con_mas_alcohol
+  - action_cantidad_por_calidad
+  - action_promedio_alcohol
+  - action_vinos_por_ph
+  - action_vinos_con_poco_azucar
+  - action_vinos_por_acidez
+  - action_distribucion_calidad
+  - action_vinos_por_sulphates
+  - action_vinos_intermedios
+  - action_contar_total_vinos
+  - action_vinos_muy_densos
+  - action_vinos_por_sulfuro_libre
+  - action_consulta_vino_nombre
+  - action_maximo_ph
+  - action_vinos_bajos_en_cloruros
+  - action_vinos_con_citricos
+  - action_vinos_con_dioxido_total
+  - action_vinos_con_ph_y_calidad
+  - action_recomendar_vino
+  - action_calidad_por_alcohol

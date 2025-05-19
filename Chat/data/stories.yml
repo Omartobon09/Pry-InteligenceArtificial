@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+  - story: flujo de saludo
+    steps:
+      - intent: saludo
+      - action: utter_saludo
+
+  - story: flujo de despedida
+    steps:
+      - intent: despedida
+      - action: utter_despedida
+
+  - story: flujo de agradecimiento
+    steps:
+      - intent: agradecer
+      - action: utter_agradecer
+
+  - story: consulta sobre calidad
+    steps:
+      - intent: preguntar_calidad
+      - action: utter_preguntar_calidad
+
+  - story: consulta sobre columnas
+    steps:
+      - intent: preguntar_columnas
+      - action: utter_preguntar_columnas
+
+  - story: consulta mejor vino
+    steps:
+      - intent: mejor_calidad
+      - action: action_mejor_calidad
+
+  - story: consulta peor vino
+    steps:
+      - intent: peor_calidad
+      - action: action_peor_calidad
+
+  - story: cantidad de vinos por calidad
+    steps:
+      - intent: cantidad_por_calidad
+      - action: action_cantidad_por_calidad
+
+  - story: ayuda general
+    steps:
+      - intent: ayuda
+      - action: utter_ayuda
+
+  - story: consulta vino por id
+    steps:
+      - intent: vino_por_id
+      - action: action_vino_por_id

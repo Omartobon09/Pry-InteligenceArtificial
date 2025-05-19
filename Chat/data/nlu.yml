@@ -1,0 +1,242 @@
+version: "3.1"
+
+nlu:
+  - intent: saludo
+    examples: |
+      - Hola
+      - Buenas
+      - Qué tal
+      - Buen día
+      - Hey
+
+  - intent: despedida
+    examples: |
+      - Adiós
+      - Hasta luego
+      - Chao
+      - Nos vemos
+      - Que estés bien
+
+  - intent: agradecer
+    examples: |
+      - Gracias
+      - Muchas gracias
+      - Te agradezco
+      - Muy amable
+      - Gracias por la ayuda
+
+  - intent: preguntar_calidad
+    examples: |
+      - ¿Qué significa la calidad del vino?
+      - ¿Cómo se mide la calidad?
+      - ¿Qué representa la columna quality?
+      - ¿Qué tan bueno es un vino con calidad 8?
+      - ¿Qué valores puede tener la calidad?
+
+  - intent: preguntar_columnas
+    examples: |
+      - ¿Qué columnas tiene el dataset?
+      - ¿Cuáles son las variables analizadas?
+      - ¿Qué características tienen los vinos?
+      - ¿Qué se mide en cada vino?
+      - ¿Qué datos hay por vino?
+
+  - intent: mejor_calidad
+    examples: |
+      - ¿Cuál es el vino con mejor calidad?
+      - ¿Cuál tiene la calidad más alta?
+      - Muéstrame el mejor vino
+      - Dime el vino top
+      - ¿Qué vino tiene calidad 10?
+
+  - intent: peor_calidad
+    examples: |
+      - ¿Cuál es el vino con peor calidad?
+      - ¿Cuál tiene la calidad más baja?
+      - Dime el peor vino
+      - Muéstrame el vino con calidad más baja
+      - ¿Qué vino tiene calidad 3?
+
+  - intent: vino_por_id
+    examples: |
+      - Dame la información del vino 45
+      - Muéstrame los datos del vino 102
+      - Quiero saber más del vino número 8
+      - Información del vino con ID 30
+      - ¿Qué datos tiene el vino 12?
+
+  - intent: vinos_con_mas_alcohol
+    examples: |
+      - ¿Qué vinos tienen más alcohol?
+      - Muéstrame los vinos con más grado alcohólico
+      - Vinos con mayor contenido de alcohol
+      - Top vinos por alcohol
+      - ¿Cuáles son los vinos más fuertes?
+
+  - intent: cantidad_por_calidad
+    examples: |
+      - ¿Cuántos vinos hay por calidad?
+      - Dime la cantidad por nivel de calidad
+      - ¿Cuántos vinos tienen calidad 7?
+      - ¿Hay muchos vinos con calidad 5?
+      - Cantidad de vinos por calidad
+
+  - intent: promedio_alcohol
+    examples: |
+      - ¿Cuál es el promedio de alcohol?
+      - Promedio de contenido alcohólico
+      - ¿Qué tanto alcohol tienen en promedio?
+      - Valor medio del alcohol
+      - ¿Cuál es el grado de alcohol promedio?
+
+  - intent: vinos_por_ph
+    examples: |
+      - Muéstrame vinos con pH mayor a 3.5
+      - Quiero vinos con pH bajo
+      - ¿Qué vinos tienen pH igual a 3?
+      - Lista de vinos por pH
+      - ¿Cuál es el pH típico?
+
+  - intent: vinos_con_poco_azucar
+    examples: |
+      - Vinos con poco azúcar
+      - Muéstrame vinos bajos en azúcar
+      - ¿Cuáles tienen azúcar residual menor a 2?
+      - Vinos con residual sugar bajo
+      - ¿Qué vinos son secos?
+
+  - intent: vinos_por_acidez
+    examples: |
+      - ¿Qué vinos tienen alta acidez?
+      - Vinos con acidez volátil mayor a 0.6
+      - Lista de vinos muy ácidos
+      - Acidez alta en vinos
+      - ¿Cuáles son menos ácidos?
+
+  - intent: distribucion_calidad
+    examples: |
+      - ¿Cómo se distribuye la calidad?
+      - Histograma de calidad
+      - ¿Qué tan frecuente es cada calidad?
+      - ¿Cuántos vinos hay por cada valor de calidad?
+      - ¿La calidad está balanceada?
+
+  - intent: vinos_por_sulphates
+    examples: |
+      - Vinos con muchos sulfitos
+      - ¿Qué vinos tienen sulphates altos?
+      - Sulphates por vino
+      - ¿Hay vinos con sulphates bajos?
+      - ¿Cuáles tienen sulphates menor a 0.4?
+
+  - intent: info_dataset
+    examples: |
+      - Háblame del dataset
+      - ¿Qué información contiene?
+      - Descripción del dataset
+      - ¿De qué trata este conjunto de datos?
+      - ¿Qué mide el dataset de vinos?
+
+  - intent: vinos_intermedios
+    examples: |
+      - ¿Qué vinos tienen calidad intermedia?
+      - Vinos con calidad 5 o 6
+      - ¿Cuáles no son ni los mejores ni los peores?
+      - Vinos promedio
+      - Muestra vinos de calidad media
+
+  - intent: contar_total_vinos
+    examples: |
+      - ¿Cuántos vinos hay en total?
+      - Total de registros
+      - ¿Cuántos datos hay?
+      - Número de vinos en la base
+      - Registros totales de vino
+
+  - intent: ayuda
+    examples: |
+      - ¿Qué puedes hacer?
+      - Ayuda
+      - ¿Cómo te uso?
+      - ¿Qué opciones tengo?
+      - ¿Qué consultas me puedes mostrar?
+
+  - intent: vinos_muy_densos
+    examples: |
+      - Vinos con densidad alta
+      - ¿Qué vinos tienen densidad mayor a 1?
+      - Lista de vinos densos
+      - Densidad en vinos
+      - ¿Cuáles tienen densidad baja?
+
+  - intent: vinos_por_sulfuro_libre
+    examples: |
+      - ¿Qué vinos tienen más free sulfur dioxide?
+      - Muéstrame los que tienen más dióxido de azufre libre
+      - Sulfitos libres en los vinos
+      - Lista de sulfuros libres
+      - Comparación de sulfuro libre
+
+  - intent: consulta_vino_nombre
+    examples: |
+      - Quiero ver un vino específico
+      - Dame el vino con ID 77
+      - Muestra el vino 2
+      - Vino número 25
+      - Datos del vino con ID 88
+
+  - intent: maximo_ph
+    examples: |
+      - ¿Cuál es el pH máximo?
+      - pH más alto del dataset
+      - ¿Qué vino tiene el pH más alto?
+      - Máximo pH registrado
+      - El pH más elevado
+
+  - intent: vinos_bajos_en_cloruros
+    examples: |
+      - Vinos con menos cloruros
+      - Cloruros bajos en vinos
+      - ¿Cuáles tienen chlorides bajos?
+      - Vinos con pocos cloruros
+      - Chlorides por debajo de 0.05
+
+  - intent: vinos_con_citricos
+    examples: |
+      - ¿Qué vinos tienen mucho ácido cítrico?
+      - Lista de vinos con citric acid alto
+      - Citric acid en los vinos
+      - Vinos cítricos
+      - ¿Cuáles tienen citric acid > 0.4?
+
+  - intent: vinos_con_dioxido_total
+    examples: |
+      - ¿Qué vinos tienen mucho total sulfur dioxide?
+      - Dióxido total alto
+      - Sulfitos totales en vinos
+      - ¿Cuánto total sulfur dioxide hay?
+      - Comparación de dióxido total
+
+  - intent: vinos_con_ph_y_calidad
+    examples: |
+      - Muéstrame vinos con pH > 3.3 y calidad alta
+      - Vinos equilibrados entre pH y calidad
+      - ¿Qué vinos tienen pH bueno y calidad 8?
+      - Vinos balanceados
+      - Filtros de pH y calidad
+
+  - intent: recomendar_vino
+    examples: |
+      - Recomiéndame un vino
+      - ¿Cuál me recomiendas?
+      - Un vino bueno para probar
+      - Sugiere un vino
+      - ¿Qué vino me conviene?
+
+  - intent: calidad_por_alcohol
+    examples: |
+      - ¿La calidad sube con el alcohol?
+      - ¿Hay relación entre alcohol y calidad?
+      - ¿Cuánto influye el alcohol?
+      - Relación alcohol-calidad
+      - ¿Más alcohol significa mejor vino?
