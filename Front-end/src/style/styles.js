@@ -6,28 +6,39 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
+    color: 'white'
   },
   text_form: {
     fontSize: 17,
     textAlign: 'center',
     marginBottom: 30,
+    color: 'white'
   },
   input: {
     backgroundColor: 'transparent',
     borderBottomWidth: 1,
     borderRadius: 0,
+    borderColor: 'white',
+    color: 'white',
     padding: 15,
     marginBottom: 20,
     fontSize: 16,
   },
   button: {
-    backgroundColor: '#3f51b5',
+    backgroundColor: 'white',
     padding: 15,
     borderRadius: 10,
-  },
+   },
   buttonText: {
-    color: '#fff',
+    color: 'black',
     fontWeight: 'bold',
     textAlign: 'center',
+    fontSize: 16,
   },
+  container_bg: {
+    backgroundColor: 'rgba(0, 0, 0, 0.53)',
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+  }
 });
