@@ -4,10 +4,10 @@ import LoginForm from '../components/LoginForm';
 import styles from '../style/styles';
 
 
-const LoginScreen = () => {
+const LoginScreen = ({ onLogin }) => {
   return (
     <View style={styles.container_bg}>
-      <LoginForm />
+      <LoginForm onLogin={onLogin} />
     </View>
   );
 };

@@ -40,5 +40,15 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-  }
+  },
+   welcome: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  infoText: {
+    fontSize: 16,
+    color: '#555',
+    marginBottom: 20,
+  },
 });

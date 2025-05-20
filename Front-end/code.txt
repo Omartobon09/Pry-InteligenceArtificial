@@ -1,0 +1,9 @@
+npx expo install @react-navigation/native
+npx expo install @react-navigation/native-stack
+npx expo install @react-navigation/bottom-tabs
+npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+
+npx create-expo-app . --template blank --yes
+
+
+npx expo install @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated

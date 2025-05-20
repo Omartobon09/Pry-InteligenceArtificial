@@ -2,33 +2,37 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import styles from '../style/styles';
 
-const LoginForm = () => {
-  const [email, setEmail] = useState('');
+const LoginForm = ({ onLogin }) => {
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (email === 'admin@example.com' && password === '123456') {
-      Alert.alert('Login exitoso');
+    // Login local (temporal)
+    if (name === 'Nicolas' && password === '123456') {
+      onLogin(name); // Notifica al padre que el login fue exitoso
     } else {
       Alert.alert('Error', 'Credenciales incorrectas');
     }
 
-    // API
     /*
+    // Consumo de API para login (descomentar en el futuro)
     fetch('https://tu-api.com/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ name, password })
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        // Guardar token o navegar
-      } else {
-        Alert.alert('Credenciales inválidas');
-      }
-    })
-    .catch(console.error);
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          onLogin(data.name); // Enviar nombre desde la API
+        } else {
+          Alert.alert('Credenciales inválidas');
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        Alert.alert('Error', 'Hubo un problema al iniciar sesión');
+      });
     */
   };
 
@@ -39,10 +43,10 @@ const LoginForm = () => {
 
       <TextInput
         style={styles.input}
-        placeholder="Correo"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
+        placeholder="Nombre"
+        value={name}
+        onChangeText={setName}
+        keyboardType="name-phone-pad"
         autoCapitalize="none"
       />
 
