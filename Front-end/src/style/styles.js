@@ -36,10 +36,12 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   container_bg: {
-    backgroundColor: 'rgba(0, 0, 0, 0.53)',
+    backgroundColor: 'rgba(0, 0, 0, 0.83)',
     flex: 1,
     justifyContent: 'center',
     padding: 20,
+       width: "100%",
+    height: "100%",
   },
    welcome: {
     fontSize: 24,
@@ -52,7 +54,8 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   containers: {
-    padding: 20,
-
+    padding: 220,
+    width: "100%",
+    height: "100%",
   }
 });

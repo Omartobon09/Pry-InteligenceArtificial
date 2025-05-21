@@ -37,7 +37,7 @@ const LoginForm = ({ onLogin }) => {
   };
 
   return (
-    <View>
+    <View style={[styles.container, { backgroundColor: 'transparent' }]}>
       <Text style={styles.title}>Iniciar Sesión</Text>
       <Text style={styles.text_form}>Por favor digita tus credenciales</Text>
 
