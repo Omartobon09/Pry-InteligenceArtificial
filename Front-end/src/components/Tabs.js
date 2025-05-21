@@ -6,11 +6,11 @@ import ChatScreen from '../screens/ChatScreen';
 import PrediccionScreen from '../screens/PrediccionScreen';
 import RegistroScreen from '../screens/RegistroScreen';
 import ReporteScreen from '../screens/ReporteScreen';
-// import LogoutScreen from '../screens/LogoutScreen';
+import LogoutScreen from '../screens/LogoutScreen';
 
 const Tab = createBottomTabNavigator();
 
-const HomeTabs = ({ route }) => {
+const HomeTabs = ({ route, setIsLoggedIn }) => {
   const userName = route?.params?.userName || 'Invitado';
 
   return (
@@ -22,7 +22,14 @@ const HomeTabs = ({ route }) => {
       <Tab.Screen name="Predicción" component={PrediccionScreen} />
       <Tab.Screen name="Nuevo Registro" component={RegistroScreen} />
       <Tab.Screen name="Reportes" component={ReporteScreen} />
-      {/* <Tab.Screen name="Salir" component={LogoutScreen} /> */}
+      <Tab.Screen name="Salir">
+        {(props) => (
+          <LogoutScreen
+            {...props}
+            setIsLoggedIn={setIsLoggedIn} 
+          />
+        )}
+      </Tab.Screen>
     </Tab.Navigator>
   );
 };

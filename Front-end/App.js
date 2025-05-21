@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [checkingLogin, setCheckingLogin] = useState(true); // Para evitar parpadeo
+  const [checkingLogin, setCheckingLogin] = useState(true);
 
   useEffect(() => {
     const checkLoginStatus = async () => {
@@ -21,7 +21,6 @@ export default function App() {
       if (stored === 'true') setIsLoggedIn(true);
       setCheckingLogin(false);
     };
-
     checkLoginStatus();
   }, []);
 
@@ -39,14 +38,22 @@ export default function App() {
                     {...props}
                     onLogin={async (name) => {
                       await AsyncStorage.setItem('loggedIn', 'true');
-                      props.navigation.navigate('Home', { userName: name });
                       setIsLoggedIn(true);
+                      props.navigation.replace('Home', { userName: name });
                     }}
                   />
                 )}
               </Stack.Screen>
             ) : (
-              <Stack.Screen name="Home" component={HomeScreen} />
+              <Stack.Screen name="Home">
+                {(props) => (
+                  <HomeScreen
+                    {...props}
+                    setIsLoggedIn={setIsLoggedIn} 
+                    route={props.route}
+                  />
+                )}
+              </Stack.Screen>
             )}
           </Stack.Navigator>
         </NavigationContainer>
