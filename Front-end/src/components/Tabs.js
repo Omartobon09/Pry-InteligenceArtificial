@@ -10,25 +10,18 @@ import LogoutScreen from '../screens/LogoutScreen';
 
 const Tab = createBottomTabNavigator();
 
-const HomeTabs = ({ route, setIsLoggedIn }) => {
-  const userName = route?.params?.userName || 'Invitado';
-
+const HomeTabs = ({ userName, setIsLoggedIn }) => {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen name="Inicio">
-        {(props) => <InicioScreen {...props} route={{ ...route, params: { userName } }} />}
+        {(props) => <InicioScreen {...props} userName={userName} />}
       </Tab.Screen>
       <Tab.Screen name="Chat" component={ChatScreen} />
       <Tab.Screen name="Predicción" component={PrediccionScreen} />
       <Tab.Screen name="Nuevo Registro" component={RegistroScreen} />
       <Tab.Screen name="Reportes" component={ReporteScreen} />
       <Tab.Screen name="Salir">
-        {(props) => (
-          <LogoutScreen
-            {...props}
-            setIsLoggedIn={setIsLoggedIn} 
-          />
-        )}
+        {(props) => <LogoutScreen {...props} setIsLoggedIn={setIsLoggedIn} />}
       </Tab.Screen>
     </Tab.Navigator>
   );

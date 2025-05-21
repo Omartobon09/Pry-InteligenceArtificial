@@ -8,7 +8,7 @@ const LoginForm = ({ onLogin }) => {
 
   const handleLogin = () => {
     // Login local (temporal)
-    if (name === 'Nicolas' && password === '123456') {
+    if (name === 'Nicolas' && password === '123456' || name === 'Junior' && password === '123456') {
       onLogin(name); // Notifica al padre que el login fue exitoso
     } else {
       Alert.alert('Error', 'Credenciales incorrectas');

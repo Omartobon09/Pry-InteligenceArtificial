@@ -2,9 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styles from '../style/styles';
 
-const InicioScreen = ({ route }) => {
-  const userName = route?.params?.userName || 'Invitado';
-
+const InicioScreen = ({ userName }) => {
   return (
     <View style={styles.containers}>
       <Text style={styles.welcome}>¡Bienvenido, {userName}!</Text>
