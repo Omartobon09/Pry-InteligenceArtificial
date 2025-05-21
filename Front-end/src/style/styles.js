@@ -51,4 +51,8 @@ export default StyleSheet.create({
     color: '#555',
     marginBottom: 20,
   },
+  containers: {
+    padding: 20,
+
+  }
 });
