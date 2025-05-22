@@ -12,6 +12,7 @@ const caracteristicas = [
 const InicioScreen = ({ userName }) => {
   return (
     <ScrollView style={styles.containers}>
+      <View style={styles.containers_p}>
       <Text style={styles.welcome}>¡Bienvenido, {userName} 👋!</Text>
       <Text style={styles.infoText}>
         Esta es la app de vinos, donde puedes:
@@ -31,6 +32,7 @@ const InicioScreen = ({ userName }) => {
           {item}
         </Text>
       ))}
+      </View>
     </ScrollView>
   );
 };
