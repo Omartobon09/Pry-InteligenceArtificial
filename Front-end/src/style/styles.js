@@ -50,11 +50,11 @@ export default StyleSheet.create({
   },
   infoText: {
     fontSize: 16,
-    color: '#555',
-    marginBottom: 20,
+    color: '#101517',
+    marginBottom: 10,
   },
   containers: {
-    padding: 220,
+    padding: 20,
     width: "100%",
     height: "100%",
   }
