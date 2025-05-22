@@ -143,6 +143,7 @@ export default StyleSheet.create({
   },
   chatSendText: {
     color: "black",
+    textAlign: 'center',
     fontWeight: "bold",
     fontSize: 16,
   },

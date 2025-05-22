@@ -53,8 +53,8 @@ const PredictionScreen = () => {
         onChangeText={setFood}
       />
 
-      <TouchableOpacity style={styles.button} onPress={handlePredict}>
-        <Text style={styles.buttonText}>Obtener predicciones</Text>
+      <TouchableOpacity style={styles.chatSendButton} onPress={handlePredict}>
+        <Text style={styles.chatSendText}>Obtener predicciones</Text>
       </TouchableOpacity>
 
       {predictions.length > 0 && (
