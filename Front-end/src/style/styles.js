@@ -53,6 +53,19 @@ export default StyleSheet.create({
     color: '#101517',
     marginBottom: 10,
   },
+  infoTextItem: {
+    fontSize: 16,
+    color: '#101517',
+    paddingLeft: 10, 
+    paddingBottom: 5,
+    fontStyle: 'italic',
+  },
+  descriptionText: {
+    fontWeight: '600',
+    fontSize: 17,
+    fontStyle: 'italic',
+    paddingLeft: 10, 
+  },
   containers: {
     padding: 20,
     width: "100%",
