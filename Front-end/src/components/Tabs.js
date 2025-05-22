@@ -44,13 +44,13 @@ const HomeTabs = ({ userName, setIsLoggedIn }) => {
 
           return <Ionicons name={iconName} size={18} color={color} />;
         },
-        tabBarActiveTintColor: "#1E90FF",
+        tabBarActiveTintColor: "white",
         tabBarInactiveTintColor: "gray",
         tabBarStyle: {
           height: 70,
           paddingBottom: 10,
           paddingTop: 5,
-          backgroundColor: "#FFF0F5",
+          backgroundColor: "rgba(0, 0, 0, 0.83)",
           borderTopWidth: 1,
           borderTopColor: "#ddd",
         },

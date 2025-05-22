@@ -2,10 +2,11 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   title: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 20,
     textAlign: "center",
+    fontStyle: 'italic',
     color: "white",
   },
   text_form: {
@@ -15,22 +16,22 @@ export default StyleSheet.create({
     color: "white",
   },
   input: {
-    backgroundColor: "transparent",
+    backgroundColor: "white",
     borderBottomWidth: 1,
-    borderRadius: 0,
+    borderRadius: 20,
     borderColor: "white",
-    color: "white",
+    color: "black",
     padding: 15,
     marginBottom: 20,
     fontSize: 16,
   },
   button: {
-    backgroundColor: "white",
+    backgroundColor: "blue",
     padding: 15,
-    borderRadius: 10,
+    borderRadius: 20,
   },
   buttonText: {
-    color: "black",
+    color: "white",
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 16,
@@ -65,17 +66,20 @@ export default StyleSheet.create({
     fontSize: 17,
     fontStyle: "italic",
     paddingLeft: 10,
+    lineHeight: 25,
   },
   containers: {
     width: "100%",
     height: "100%",
+    flex: 1,
   },
   containers_p: {
     padding: 20,
   },
   chatHeader: {
     padding: 16,
-    backgroundColor: "#fff",
+    paddingTop: 0,
+    backgroundColor: "rgba(0, 0, 0, 0.83)",
     borderBottomWidth: 1,
     borderBottomColor: "#ccc",
   },
@@ -86,10 +90,10 @@ export default StyleSheet.create({
   },
   chatStatus: {
     fontSize: 14,
-    color: "#666",
-    marginTop: 4,
+    color: "white",
+    marginTop: 0,
+    fontWeight: "bold"
   },
-
   chatScroll: {
     flexGrow: 1,
     justifyContent: "flex-start",
@@ -101,7 +105,7 @@ export default StyleSheet.create({
     borderRadius: 10,
   },
   chatUser: {
-    backgroundColor: "#DCF8C6",
+    backgroundColor: "#A3C1E2",
     alignSelf: "flex-end",
     borderTopRightRadius: 0,
   },
@@ -119,8 +123,6 @@ export default StyleSheet.create({
     flexDirection: "row",
     padding: 10,
     backgroundColor: "#fff",
-    borderTopWidth: 1,
-    borderTopColor: "#ccc",
   },
   chatInput: {
     flex: 1,
@@ -133,14 +135,35 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   chatSendButton: {
-    backgroundColor: "#4CAF50",
+    backgroundColor: "#63CD5D",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,
     justifyContent: "center",
   },
   chatSendText: {
-    color: "#fff",
+    color: "black",
+    fontWeight: "bold",
     fontSize: 16,
   },
+  predictionCard: {
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  predictionImage: {
+    width: 200,
+    height: 200,
+    display: "block",
+    margin: 'auto',
+  },
+  predictionType: {
+    width: '80%',
+    fontSize: 18,
+    marginTop: 20,
+    marginBottom: 15,
+  },
+  predictionDescription: {
+    width: '80%',
+    fontSize: 18,
+  }
 });

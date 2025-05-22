@@ -66,13 +66,10 @@ const ChatScreen = ({ userName }) => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.containers}
     >
-      {/* Cabecera */}
       <View style={styles.chatHeader}>
         <Text style={styles.chatUserName}>{userName}</Text>
         <Text style={styles.chatStatus}>🟢 En línea - Sommelier virtual</Text>
       </View>
-
-      {/* Mensajes */}
       <ScrollView contentContainerStyle={styles.chatScroll}>
         <View style={styles.containers_p}>
           {messages.map((msg, index) => (
@@ -88,8 +85,6 @@ const ChatScreen = ({ userName }) => {
           ))}
         </View>
       </ScrollView>
-
-      {/* Input */}
       <View style={styles.chatInputContainer}>
         <TextInput
           style={styles.chatInput}

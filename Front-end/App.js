@@ -8,7 +8,6 @@ import { Platform } from "react-native";
 
 import LoginScreen from "./src/screens/LoginScreen";
 import HomeScreen from "./src/screens/HomeScreen";
-import BackgroundImage from "./assets/bg-vino.jpg";
 import LogoutScreen from "./src/screens/LogoutScreen";
 
 const Stack = createNativeStackNavigator();
@@ -38,12 +37,7 @@ export default function App() {
   if (checkingLogin) return null;
 
   return (
-    <View style={{ flex: 1, backgroundColor: "transparent" }}>
-      <ImageBackground
-        source={BackgroundImage}
-        style={styles.background}
-        resizeMode="cover"
-      >
+    <View style={{ height: '100%', width: '100%', backgroundColor: '#f0f0f0' }}>
         <SafeAreaView style={styles.container}>
           <NavigationContainer>
             {isLoggedIn ? (
@@ -77,7 +71,6 @@ export default function App() {
             )}
           </NavigationContainer>
         </SafeAreaView>
-      </ImageBackground>
     </View>
   );
 }

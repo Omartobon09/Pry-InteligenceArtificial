@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, ScrollView } from "react-native";
+import { View, Text, FlatList, ScrollView, SafeAreaView } from "react-native";
 import styles from "../style/styles";
 
 const caracteristicas = [
@@ -11,19 +11,19 @@ const caracteristicas = [
 
 const InicioScreen = ({ userName }) => {
   return (
-    <ScrollView style={styles.containers}>
+    <ScrollView style={[styles.containers]}>
       <View style={styles.containers_p}>
-      <Text style={styles.welcome}>¡Bienvenido, {userName} 👋!</Text>
+      <Text style={[styles.welcome, {marginBottom: 20}]}>¡Bienvenido, {userName} 👋!</Text>
       <Text style={styles.infoText}>
         Esta es la app de vinos, donde puedes:
       </Text>
-      <View style={[{paddingBottom: 10}]}>
-        <Text style={styles.descriptionText}>Chatear con la IA de RASA</Text>
-        <Text style={styles.descriptionText}>Predecir resultados</Text>
-        <Text style={styles.descriptionText}>Registrar nuevos datos</Text>
-        <Text style={styles.descriptionText}>Consultar reportes</Text>
+      <View style={[{paddingBottom: 10, paddingTop: 10}]}>
+        <Text style={styles.descriptionText}>⚫ Chatear con la IA de RASA</Text>
+        <Text style={styles.descriptionText}>⚫ Predecir resultados</Text>
+        <Text style={styles.descriptionText}>⚫ Registrar nuevos datos</Text>
+        <Text style={styles.descriptionText}>⚫ Consultar reportes</Text>
       </View>
-      <Text style={styles.infoText}>
+      <Text style={[styles.infoText, {paddingBottom: 20, paddingTop: 20}]}>
         Los vinos son bebidas alcohólicas obtenidas por la fermentación del jugo
         de uvas. 🍇🍷🍾
       </Text>

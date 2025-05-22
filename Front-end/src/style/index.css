@@ -1,4 +1,6 @@
 /* index.css */
 html, body, #root {
-  background-color: transparent !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
