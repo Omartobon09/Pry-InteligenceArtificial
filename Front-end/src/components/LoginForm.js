@@ -37,7 +37,7 @@ const LoginForm = ({ onLogin }) => {
       formData.append('username', email);
       formData.append('password', password);
 
-      const response = await fetch('http://192.168.151.73:8000/login', {
+      const response = await fetch('http://192.168.1.23:8000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -53,7 +53,7 @@ const LoginForm = ({ onLogin }) => {
         await AsyncStorage.setItem('token_type', data.token_type);
         
         // Obtener datos del usuario descifrando el token con la ruta /usuario
-        const userResponse = await fetch('http://192.168.151.73:8000/usuario', {
+        const userResponse = await fetch('http://192.168.1.23:8000/usuario', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${data.access_token}`,
