@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { colors, shadows } from "../style/sharedStyles"; // Ajusta el path si es necesario
 
 import InicioScreen from "../screens/InicioScreen";
 import ChatScreen from "../screens/ChatScreen";
@@ -42,20 +43,22 @@ const HomeTabs = ({ userName, setIsLoggedIn }) => {
               iconName = "alert-circle-outline";
           }
 
-          return <Ionicons name={iconName} size={18} color={color} />;
+          return <Ionicons name={iconName} size={22} color={color} />;
         },
-        tabBarActiveTintColor: "white",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.gray,
         tabBarStyle: {
-          height: 70,
-          paddingBottom: 10,
-          paddingTop: 5,
-          backgroundColor: "rgba(0, 0, 0, 0.83)",
+          height: 75,
+          paddingBottom: 12,
+          paddingTop: 8,
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
           borderTopWidth: 1,
-          borderTopColor: "#ddd",
+          borderTopColor: colors.border,
+          ...shadows.small,
         },
         tabBarLabelStyle: {
-          fontSize: 11,
+          fontSize: 12,
+          fontWeight: "600",
         },
       })}
     >
