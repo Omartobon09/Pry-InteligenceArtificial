@@ -45,7 +45,7 @@ const ChatScreen = ({ userName = "Usuario" }) => {
     }, 200);
 
     try {
-      const response = await fetch('https://fa57-181-236-101-182.ngrok-free.app/webhooks/rest/webhook', {
+      const response = await fetch('https://0988-191-156-241-65.ngrok-free.app/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

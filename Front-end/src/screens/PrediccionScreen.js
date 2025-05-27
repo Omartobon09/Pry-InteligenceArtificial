@@ -152,7 +152,7 @@ const PredictionScreen = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://192.168.102.73:8000/predict_all', {
+      const response = await fetch('http://192.168.151.73:8000/predict_all', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
