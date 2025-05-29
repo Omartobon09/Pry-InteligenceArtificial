@@ -170,7 +170,7 @@ const AddRecordScreen = ({ userName = "Usuario" }) => {
       });
 
       // Aquí debes cambiar la URL por la de tu API para agregar registros
-      const response = await fetch('http://192.168.1.23:8000/add_wine', {
+      const response = await fetch('http://192.168.102.73:8000/add_wine', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

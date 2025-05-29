@@ -35,7 +35,7 @@ const ReportsScreen = ({ userName = "Usuario" }) => {
     setLoading(true);
     try {
       // Aquí debes cambiar por la URL de tu API de reportes
-      const response = await fetch(`http://192.168.1.23:8000/reports/${activeTab}`, {
+      const response = await fetch(`http://192.168.102.73:8000/reports/${activeTab}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
